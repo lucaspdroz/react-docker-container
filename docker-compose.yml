@@ -1,0 +1,12 @@
+version: '3'
+services:
+  host:
+    build:
+      context: ./host
+    ports:
+      - "3000:3000"
+    container_name: host
+    stdin_open: true
+    volumes:
+      - ./host:/usr/src/app/host
+      - /usr/src/app/host/node_modules
